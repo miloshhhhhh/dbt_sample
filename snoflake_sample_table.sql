@@ -1,4 +1,3 @@
--- Language: sql
 
 -- Create table customers, with columns:
 --   id: integer, primary key, autoincrement
