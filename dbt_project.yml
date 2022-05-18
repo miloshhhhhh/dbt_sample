@@ -1,0 +1,33 @@
+models:
+  customer_data:
+    +materialized: table
+    +source: customer_data
+    +schema: public
+    +primary_key: customer_id
+
+  customer_data_history:
+    +materialized: table
+    +source: customer_data_history
+    +schema: public
+    +primary_key: customer_id
+    +history: true
+
+  customer_data_history_v2:
+    +materialized: table
+    +source: customer_data_history_v2
+    +schema: public
+    +primary_key: customer_id
+    +history: true
+    +version: 2
+
+  customer_data_history_v3:
+
+    +materialized: table
+    +source: customer_data_history_v3
+    +schema: public
+    +primary_key: customer_id
+    +history: true
+    +version: 3
+
+
+# Path: dbt_project.yml
