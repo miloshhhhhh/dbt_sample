@@ -23,9 +23,12 @@ with customer_data as (
     products.stock as product_stock,
     products.image as product_image
   from customers
-  join orders on customers.id = orders.customer_id
-  join order_items on orders.id = order_items.order_id
-  join products on order_items.product_id = products.id
+  
+--  everything start from select in dbt | try without join | use 'Alias'\select | template | schema 
+
+--   join orders on customers.id = orders.customer_id
+--   join order_items on orders.id = order_items.order_id
+--   join products on order_items.product_id = products.id
 )
 
 
